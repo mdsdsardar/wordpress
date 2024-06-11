@@ -13,8 +13,3 @@ sed -i 's/username_here/${db_user}/g' /var/www/html/wp-config.php
 sed -i 's/password_here/${db_password}/g' /var/www/html/wp-config.php
 sed -i 's/localhost/${db_endpoint}/g' /var/www/html/wp-config.php
 
-# Create health-check.php file
-echo '<?php' > /var/www/html/health-check.php
-echo '// health-check.php' >> /var/www/html/health-check.php
-echo 'http_response_code(200);' >> /var/www/html/health-check.php
-echo 'echo "Healthy";' >> /var/www/html/health-check.php

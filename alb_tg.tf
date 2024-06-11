@@ -7,7 +7,7 @@ resource "aws_lb_target_group" "example" {
   vpc_id   = "vpc-038b85c62965959b1" # Replace with your VPC ID
 
   health_check {
-    path                = "/health-check.php"
+    path                = "/"
     protocol            = "HTTP"
     port                = "traffic-port"
     healthy_threshold   = 2

@@ -8,6 +8,7 @@ resource "aws_rds_cluster" "example" {
   database_name             = "wordpress"
   master_username           = "admin"
   master_password           = "12345678"
+  iops                      = 3000
   db_subnet_group_name      = data.aws_db_subnet_group.example.name
   vpc_security_group_ids    = [data.aws_security_group.example.id]
   skip_final_snapshot       = true
